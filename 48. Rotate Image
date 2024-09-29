@@ -1,0 +1,7 @@
+import numpy as np
+class Solution:
+    def rotate(self, matrix: List[List[int]]) -> None:
+        k=np.transpose(matrix)
+        for i in range(len(matrix)):
+            for j in range(len(matrix[i])):
+                matrix[i][j]=k[i][len(matrix[i])-1-j]
