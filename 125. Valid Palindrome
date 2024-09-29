@@ -1,0 +1,21 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        w=[]
+        for i in s: 
+            if i.isalpha() or i.isdigit():
+                w.append(i.lower())
+        if len(w)%2==0:
+            w1=w[:len(w)//2]
+            w2=w[len(w)//2:]
+            w2.reverse()
+            print(len(w),w1,w2)
+            if w1==w2:
+                return True
+        else:
+            w1=w[:len(w)//2]
+            w2=w[len(w)//2+1:]
+            w2.reverse()
+            print(len(w),w1,w2)
+            if w1==w2:
+                return True
+        return False
